@@ -13,7 +13,7 @@ Real-Time Visualization: Displays upscaled frames (and optical flow visualizatio
 Performance
 
 Without Optical Flow (without_OF.cu): Achieves high frame rates (450+ FPS) for direct upscaling(linux supported machines only), suitable for real-time applications where frame interpolation is not needed.
-With Optical Flow (with_OF.txt): Slower due to additional optical flow computation and frame warping but provides smoother playback by interpolating frames capable of achieveing around ~250FPS. Includes detailed performance metrics for each processing stage.
+With Optical Flow (with_OF.cu): Slower due to additional optical flow computation and frame warping but provides smoother playback by interpolating frames capable of achieveing around ~250FPS. Includes detailed performance metrics for each processing stage.
 
 Prerequisites
 To compile and run the code, ensure you have the following installed:
