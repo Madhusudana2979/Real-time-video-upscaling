@@ -2,6 +2,7 @@ CUDA-Based Video Upscaling with Optical Flow
 This project implements a CUDA-based video processing pipeline for upscaling video frames, with an optional optical flow-based frame interpolation for smoother playback. Two implementations are provided: one with optical flow (with_OF.cu) for generating intermediate frames, and one without optical flow (without_OF.cu) for direct upscaling. Both versions leverage CUDA for GPU acceleration and OpenCV for video handling and visualization.
 Overview
 The project processes input videos by upscaling their resolution using bilinear interpolation on the GPU. The with_OF.cu version additionally computes optical flow between consecutive frames to generate intermediate frames, effectively increasing the frame rate while maintaining smooth motion. Both implementations use CUDA streams for asynchronous processing to optimize performance.
+Device: GeForce RTX 3050
 Key Features
 
 Upscaling: Scales video frames by a specified factor (default: 4x) using bilinear interpolation.
@@ -12,7 +13,7 @@ Real-Time Visualization: Displays upscaled frames (and optical flow visualizatio
 
 Performance
 
-Without Optical Flow (without_OF.cu): Achieves high frame rates (450+ FPS) for direct upscaling(linux supported machines only), suitable for real-time applications where frame interpolation is not needed.
+Without Optical Flow (without_OF.cu): Achieves high frame rates (450+ FPS) for direct upscaling(linux), suitable for real-time applications where frame interpolation is not needed.
 With Optical Flow (with_OF.cu): Slower due to additional optical flow computation and frame warping but provides smoother playback by interpolating frames capable of achieveing around ~250FPS. Includes detailed performance metrics for each processing stage.
 
 Prerequisites
